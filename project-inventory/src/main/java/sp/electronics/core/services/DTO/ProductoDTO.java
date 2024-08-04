@@ -2,7 +2,7 @@ package sp.electronics.core.services.DTO;
 
 public class ProductoDTO {
     private Integer proCodigo;
-    private Integer proImagen; //TOO
+    private byte[] proImagen; 
     private String proModelo;
     private String proDescripcion;
     private Integer proCantidad;
