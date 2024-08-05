@@ -4,11 +4,8 @@ package sp.electronics.core.services.mapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import sp.electronics.core.models.ProductoEntity;
-import sp.electronics.core.services.DTO.ProductoDTO;
-
 import org.modelmapper.ModelMapper;
-import org.modelmapper.TypeMap;
+
 
 @Configuration
 public class Mapper {

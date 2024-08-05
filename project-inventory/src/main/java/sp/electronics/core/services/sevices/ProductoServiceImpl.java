@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
@@ -13,6 +14,7 @@ import sp.electronics.core.models.ProductoEntity;
 import sp.electronics.core.repositories.ProductoRepository;
 import sp.electronics.core.services.DTO.ProductoDTO;
 
+@Service
 public class ProductoServiceImpl implements IProductoService {
 
     @Autowired
