@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ProjectInventoryApplication<project-inventory>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "sp.electronics.core.ProjectInventoryApplication",
+            "projectName": "project-inventory",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
