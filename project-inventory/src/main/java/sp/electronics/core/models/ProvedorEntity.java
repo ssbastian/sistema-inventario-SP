@@ -2,7 +2,6 @@ package sp.electronics.core.models;
 
 import java.sql.Date;
 
-import org.springframework.context.annotation.Primary;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.PrimaryKeyJoinColumn;
@@ -17,6 +16,8 @@ import lombok.Setter;
 @Entity
 @PrimaryKeyJoinColumn(name = "IdProvedor")
 @Table(name="Provedor")
+
+
 public class ProvedorEntity extends ContactoEntity{
     
     //atributos adicionales a contacto

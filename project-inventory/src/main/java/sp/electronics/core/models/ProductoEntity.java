@@ -24,7 +24,7 @@ public class ProductoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer proCodigo;
-
+   
     @Lob // Indica que este campo se almacena como un tipo de datos BLOB en la base de datos
     private byte[] proImagen; 
     private String proModelo;
