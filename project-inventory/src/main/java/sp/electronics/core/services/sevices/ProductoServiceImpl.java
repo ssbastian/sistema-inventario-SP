@@ -68,17 +68,20 @@ public class ProductoServiceImpl implements IProductoService {
     }
 
     @Override
-    @Transactional(readOnly = true)
+    @Transactional
     public boolean delete(Integer id) {
         boolean bandera = false; 
         Optional <ProductoEntity> optional = this.servicioAccesoBaseDatos.findById(id);
         ProductoEntity user = optional.get();
 
         if (user != null) {
-            this.servicioAccesoBaseDatos.delete(user);
+         /*    this.servicioAccesoBaseDatos.delete(user); */
+            this.servicioAccesoBaseDatos.deleteById(id);
             bandera = true;
         }
         return bandera;
     }
     
+
+
 }
