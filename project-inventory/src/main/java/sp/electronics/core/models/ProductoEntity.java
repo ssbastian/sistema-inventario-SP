@@ -5,7 +5,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -32,4 +34,14 @@ public class ProductoEntity {
     private Integer proCantidad;
     private Double proPrecioUnitario;
     private Integer proEstado;
+
+    @ManyToOne
+    @JoinColumn(name="impId", nullable = false)
+    private ImpuestoEntity objImpuesto;
+
+
+    @ManyToOne
+    @JoinColumn(name="catId", nullable = false)
+    private CategoriaEntity objCategoria;
+    
 }

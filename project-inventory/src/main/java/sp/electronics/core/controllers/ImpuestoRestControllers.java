@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import sp.electronics.core.services.DTO.ImpuestoDTO;
-import sp.electronics.core.services.DTO.ProductoDTO;
 import sp.electronics.core.services.sevices.IImpuestoService;
 
 @RestController
@@ -124,10 +123,10 @@ public class ImpuestoRestControllers {
 
 		try {
 
-			impuestoActual.setId(impuesto.getId());
-			impuestoActual.setNombre(impuesto.getNombre());
-			impuestoActual.setValor(impuesto.getValor());
-			impuestoActual.setEstado(impuesto.getEstado());
+			impuestoActual.setImpId(impuesto.getImpId());
+			impuestoActual.setImpNombre(impuesto.getImpNombre());
+			impuestoActual.setImpValor(impuesto.getImpValor());
+			impuestoActual.setImpEstado(impuesto.getImpEstado());
 
 			impuestoUpdated = impuestoService.save(impuestoActual);
 

@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class ProductoDTO {
     private Integer proCodigo;
@@ -15,4 +16,6 @@ public class ProductoDTO {
     private Integer proCantidad;
     private Double proPrecioUnitario;
     private Integer proEstado;
+
+    private ImpuestoDTO obj;
 }

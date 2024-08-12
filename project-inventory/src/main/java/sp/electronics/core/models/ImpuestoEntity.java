@@ -1,10 +1,11 @@
 package sp.electronics.core.models;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,8 +22,13 @@ import lombok.Setter;
 public class ImpuestoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String nombre;
-    private Double valor;
-    private Boolean estado;
+    private Integer impId;
+    private String impNombre;
+    private Double impValor;
+    private Boolean impEstado;
+
+    
+/*     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "objImpuesto")
+    private Iterable<ProductoEntity> productos;
+ */
 }

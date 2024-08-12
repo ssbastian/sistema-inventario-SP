@@ -1,9 +1,13 @@
 package sp.electronics.core.models;
 
+import java.util.Date;
+
 import jakarta.persistence.Entity;
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,15 +18,15 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+
 @Entity
-@Table(name="Categorias")
-public class CategoriaEntity {
+@Table(name="Compra")
+
+public class CompraEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer catId;
-	private String catNombre;
-	private String catDescripcion;
-
- 
+    private Integer comId;
+    private Date comFechaCompra;
+    private Double comMontoTotal;
 }

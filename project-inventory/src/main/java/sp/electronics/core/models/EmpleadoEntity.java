@@ -1,9 +1,11 @@
 package sp.electronics.core.models;
 
 import jakarta.persistence.Entity;
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,15 +16,18 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name="Categorias")
-public class CategoriaEntity {
 
+@Entity
+@Table(name="Empleado")
+public class EmpleadoEntity {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer catId;
-	private String catNombre;
-	private String catDescripcion;
+    private Integer empId;
+    private Integer tipoDoc;
+    private Integer empDoc; //documento
+    private String empNombres;
+    private String empApellidos;
 
- 
+
 }

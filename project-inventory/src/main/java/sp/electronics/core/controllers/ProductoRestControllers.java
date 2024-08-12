@@ -37,7 +37,7 @@ public class ProductoRestControllers {
         return objProductoDTO;
     }
 
-    @PostMapping("/productos/")
+    @PostMapping("/productos")
     public ProductoDTO create (@RequestBody ProductoDTO producto) {
         ProductoDTO objProductoDTO = null;
         objProductoDTO = this.productoService.save(producto);

@@ -10,19 +10,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 @Entity
-@Table(name="Categorias")
-public class CategoriaEntity {
+@Table(name = "DetalleProducto")
+public class DetalleProEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer catId;
-	private String catNombre;
-	private String catDescripcion;
-
- 
+    private Integer delpId;
+    private Integer delpCantidad;
+    private Double delpPrecioCom;
 }
