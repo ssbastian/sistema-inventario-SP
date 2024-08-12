@@ -22,4 +22,5 @@ public class DetalleDocEntity {
     private Integer delCant;
     private Double delPrecioUni;
 
+    
 }
