@@ -26,7 +26,7 @@ public class ProductoServiceImpl implements IProductoService {
 
     @Override
     public List<ProductoDTO> finAll() {
-      Iterable<ProductoEntity> ListaProductoEntity = this.servicioAccesoBaseDatos.findAll();
+      Iterable<ProductoEntity> ListaProductoEntity = this.servicioAccesoBaseDatos.findAllOrdenado();
       System.out.println( "antes de la consulta");
       List<ProductoDTO> objProductosDTO = this.modelMapper.map(ListaProductoEntity, new TypeToken<List<ProductoDTO>>(){}.getType());
       return objProductosDTO;

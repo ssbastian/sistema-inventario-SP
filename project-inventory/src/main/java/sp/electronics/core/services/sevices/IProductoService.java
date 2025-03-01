@@ -8,6 +8,7 @@ public interface IProductoService {
     
     public List<ProductoDTO> finAll();
 
+
     public ProductoDTO finById(Integer id);
 
     public ProductoDTO save (ProductoDTO productoDTO);
@@ -15,5 +16,6 @@ public interface IProductoService {
     public ProductoDTO update (Integer id, ProductoDTO producto);
 
     public boolean delete (Integer id);
+
     
 }

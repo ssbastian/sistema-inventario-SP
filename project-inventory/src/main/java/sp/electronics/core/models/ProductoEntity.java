@@ -1,47 +1,35 @@
 package sp.electronics.core.models;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.Lob;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import java.util.List;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Entity
-@Table(name = "Producto" )
+@Table(name = "Producto")
 public class ProductoEntity {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer proCodigo;
-   
-    @Lob // Indica que este campo se almacena como un tipo de datos BLOB en la base de datos
-    private byte[] proImagen; 
+    private Integer proId;
+
+    @Column(unique = true, nullable = true)
+    private String proCodigo;
+
+    /* @OrderBy("proCodigo ASC")  // Orden automático por proCodigo */
+    private List<String> proImagenes; // Guarda solo URLs
+
     private String proModelo;
     private String proDescripcion;
+    private String proMarca;
     private Integer proCantidad;
     private Double proPrecioUnitario;
     private Integer proEstado;
 
     @ManyToOne
-    @JoinColumn(name="impId", nullable = false)
-    private ImpuestoEntity objImpuesto;
-
-
-    @ManyToOne
-    @JoinColumn(name="catId", nullable = false)
+    @JoinColumn(name = "catId", nullable = false)
     private CategoriaEntity objCategoria;
-    
 }
