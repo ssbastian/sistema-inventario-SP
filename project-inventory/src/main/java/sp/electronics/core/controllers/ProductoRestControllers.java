@@ -39,12 +39,6 @@ public class ProductoRestControllers {
         return productoService.finAll();
     }
 
-    /*@GetMapping("/productos/{id}")
-    public ProductoDTO show (@PathVariable Integer id) {
-        ProductoDTO objProductoDTO = null;
-        objProductoDTO = this.productoService.finById(id);
-        return objProductoDTO;
-    }*/
     @GetMapping("/productos/{id}")
     public ResponseEntity<?> show(@PathVariable Integer id) {
         ProductoDTO objProductoDTO = productoService.finById(id);
@@ -56,12 +50,6 @@ public class ProductoRestControllers {
         return new ResponseEntity<>(objProductoDTO, HttpStatus.OK);
     }
 
-    /*@PostMapping("/productos")
-    public ProductoDTO create (@RequestBody ProductoDTO producto) {
-        ProductoDTO objProductoDTO = null;
-        objProductoDTO = this.productoService.save(producto);
-        return objProductoDTO;
-    }*/
 
     @PostMapping("/productos")
     public ResponseEntity<?> create(@Validated @RequestBody ProductoDTO producto, BindingResult result) {
@@ -88,13 +76,6 @@ public class ProductoRestControllers {
         return new ResponseEntity<>(objProductoDTO, HttpStatus.CREATED);
     }
 
-
-    /*@PutMapping("/productos/{id}")
-    public ProductoDTO update (@PathVariable Integer id, @RequestBody ProductoDTO productoDTO) {
-        ProductoDTO objProductoDTO = null;
-        objProductoDTO = this.productoService.update(id, objProductoDTO);
-        return objProductoDTO;
-    }*/
 
     @PutMapping("/productos/{id}")
     public ResponseEntity<?> update(@Validated @RequestBody ProductoDTO producto, BindingResult result, @PathVariable Integer id) {
@@ -141,15 +122,6 @@ public class ProductoRestControllers {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
-    /*@DeleteMapping("/productos/{id}")
-    public Boolean delete(@PathVariable Integer id) {
-        Boolean bandera = false;
-        ProductoDTO objProductoDTO = productoService.finById(id);
-        if(objProductoDTO != null) {
-            bandera = productoService.delete(id);
-        }
-        return bandera;
-    }*/
 
     @DeleteMapping("/productos/{id}")
     public ResponseEntity<?> delete(@PathVariable Integer id) {
